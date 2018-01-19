@@ -3,7 +3,6 @@ library(shiny)
 library(caret)
 library(ggplot2)
 shinyServer(function(input, output) {
-    setwd("C:/Users/Ramu/Ramu/SW/Courseera/9_Data_products/Week4/test1")
     House_Price<- read.csv("./HousePrices.csv")
     # Data Cleaning & Removing some outliers
     House_Price1<- House_Price[, -1]
