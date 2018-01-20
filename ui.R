@@ -24,7 +24,7 @@ shinyUI(fluidPage(
         ),
         mainPanel(
             plotOutput("plot1"),
-            h3("House Price for your choice of Home"),
+            h3("House Price Based on your preferance"),
             textOutput("pred1")
             
         )

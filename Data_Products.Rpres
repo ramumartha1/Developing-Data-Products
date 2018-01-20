@@ -1,0 +1,56 @@
+Developing Data Products 
+========================================================
+author: Ramu Martha
+transition: rotate
+width: 1000
+height: 900
+
+House Price Estimation
+========================================================
+type: sub-section
+
+This presentation created as part of the peer assessment for the coursera developing data products class. Below Tools are utilized to Develop the House Price estimation Web App.
+
+- **shiny** For Web App Development
+- **R-Presentation or slidify** to create presentations
+
+For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+
+
+
+Web App: House Price Estimation
+========================================================
+type: sub-section
+This App uses open source data set to predict the Price of house. Following attributes are considered estimating the price.
+
+- Area
+- No of Bedrooms
+- No of Bathrooms
+- Type of Construction
+- Type of Neighborhood
+
+Outcome : House Price in Dollars.
+
+Source Code  & Web information
+========================================================
+type: sub-section
+
+- Source Code <br />
+ https://github.com/ramumartha1/Developing-Data-Products <br />
+(To open the link right click and open in new tab)
+
+- Web App link <br />
+https://ramumartha1.shinyapps.io/Web_app/
+
+ 
+ 
+Data set details 
+========================================================
+title : false
+navigation: slide 
+Head of the Data set  
+```{r, echo=FALSE}
+House_Price<- read.csv("./HousePrices.csv")
+head(House_Price)
+
+```

@@ -8,9 +8,7 @@ shinyServer(function(input, output) {
     House_Price1<- House_Price[, -1]
     House_Price1<-House_Price1[!(House_Price1$Bedrooms==5 | House_Price1$Bathrooms==4 | House_Price1$Offers==6),]
     #Model Fitting
-    control <- trainControl(method="repeatedcv", number=10, repeats=3, search="random")
-    model1 <- train(Price ~ ., data=House_Price1, method="rf", tuneLength=15, trControl=control)
-    #model1 <- train(Price~., data = House_Price1, method ="glm")
+    model1 <- train(Price~., data = House_Price1, method ="glm")
     
     
     modelpred <- reactive({
@@ -25,7 +23,7 @@ shinyServer(function(input, output) {
         
         predict(model1, newdata)
     })
-
+    
     
     output$plot1 <- renderPlot({
         sqft1 <- input$SqFt
